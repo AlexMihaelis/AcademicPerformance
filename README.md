@@ -7,6 +7,8 @@
 
 ## ASP.NET — это бесплатная веб-платформа для создания отличных веб-сайтов и веб-приложений с помощью HTML, CSS и JavaScript.
 
+# ER-диаграмма
+![ds](/docs/ER-диаграмма.png)
 
 # Макет
 ![ds](/docs/AcademicPerformance.PNG)
