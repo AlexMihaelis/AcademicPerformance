@@ -1,0 +1,130 @@
+﻿@using AcademicPerformance.Models.ViewModels;
+@using System.Text.Json;
+@model FilterPerfomanceViewModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Страница успеваемости</title>
+
+    <script>
+        function updateDisciplines(e) {
+            // Возвращаем результат относительно выбранной дисциплины
+            let data = @Html.Raw(JsonSerializer.Serialize(Model));
+            let value = e.value;
+
+            data.SelectedDisciplineId = value;
+
+            $.ajax({
+                type: "POST",
+                url: '@(Url.Action("Filter"))',
+                data: data,
+                success: function (response) {
+                    $('html').html(response);
+                }
+            });
+        }
+
+        function updateGroups(e) {
+            // Возвращаем результат относительно выбранной группы
+            let data = @Html.Raw(JsonSerializer.Serialize(Model));
+            let value = e.value;
+
+            data.SelectedGroupId = value;
+
+            $.ajax({
+                type: "POST",
+                url: '@(Url.Action("Filter"))',
+                data: data,
+                success: function (response) {
+                    $('html').html(response);
+                }
+            });
+        }
+
+        function saveGrades() {
+            // Логика для сохранения оценок в базе данных или другом хранилище
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="form-group">
+            <label for="discipline">Выберите дисциплину</label>
+            <select name="Disciplines" id="discipline" class="form-control" onchange="updateDisciplines(this)">
+                @foreach (var discipline in Model.Disciplines)
+                {
+                    if (discipline.DisciplinesID == Model.SelectedDisciplineId)
+                    {
+                        <option selected="selected" value="@discipline.DisciplinesID">@discipline.NameDiscipline</option>
+                    }
+                    else
+                    {
+                        <option value="@discipline.DisciplinesID">@discipline.NameDiscipline</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="group">Выберите группу</label>
+            <select name="Groups" id="group" class="form-control" onchange="updateGroups(this)">
+                @foreach (var group in Model.Groups)
+                {
+                    if (group.GroupsID == Model.SelectedGroupId)
+                    {
+                        <option selected="selected" value="@group.GroupsID">@group.NameGroups</option>
+                    }
+                    else
+                    {
+                        <option value="@group.GroupsID">@group.NameGroups</option>
+                    }
+                }
+            </select>
+        </div>
+        
+
+        @if (Model.Perfomance != null && Model.Perfomance.Any())
+        {
+
+            <button class="btn btn-primary" onclick="saveGrades()">Сохранить</button>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Студент</th>
+                        <th>Понедельник</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                        <th>Пятница</th>
+                        <th>Суббота</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var student in Model.Perfomance)
+                    {
+                        <tr>
+                            <td>@student.Number</td>
+                            <td>@student.StudentFullname</td>
+                            @foreach (var grade in student.Grades.OrderBy(x => x.DayOfWeek))
+                            {
+                                <td>@grade.Value</td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+        }
+
+    </div>
+</body>
+</html>

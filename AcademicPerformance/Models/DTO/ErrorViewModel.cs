@@ -1,4 +1,4 @@
-namespace AcademicPerformance.Models
+namespace AcademicPerformance.Models.DTO
 {
     public class ErrorViewModel
     {

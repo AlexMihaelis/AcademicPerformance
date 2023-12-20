@@ -1,4 +1,4 @@
-﻿using AcademicPerformance.Models;
+﻿using AcademicPerformance.Models.DTO;
 using Microsoft.EntityFrameworkCore;
 
 namespace AcademicPerformance.EntityFraamewordCore;
@@ -14,7 +14,7 @@ public class AcademicPerformanceDBContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=AcademicPerformance;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=AcademicPerformance;Trusted_Connection=True;TrustServerCertificate=True");
         }
     }
 }
