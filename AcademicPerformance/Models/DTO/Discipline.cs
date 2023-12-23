@@ -6,7 +6,7 @@ namespace AcademicPerformance.Models.DTO
     public class Discipline
     {
         [Key]
-        public int DisciplinesID { get; set; }
-        public string NameDiscipline { get; set; }
+        public int DisciplineId { get; set; }
+        public string Name { get; set; }
     }
 }

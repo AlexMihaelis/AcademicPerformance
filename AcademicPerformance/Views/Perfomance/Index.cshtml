@@ -4,6 +4,14 @@
 
 @{
     ViewData["Title"] = "Home Page";
+
+    var disciplinesSelectItemList = Model.Disciplines
+        .Select(x => new SelectListItem(x.Name, x.DisciplineId.ToString(), x.DisciplineId == Model.SelectedDisciplineId))
+        .ToList();
+
+    var groupsSelectItemList = Model.Groups
+        .Select(x => new SelectListItem(x.Name, x.GroupId.ToString(), x.GroupId == Model.SelectedDisciplineId))
+        .ToList();
 }
 <!DOCTYPE html>
 <html>
@@ -11,13 +19,16 @@
     <title>Страница успеваемости</title>
 
     <script>
+        function setDirectionValues(data) {
+            data.SelectedDisciplineId = $('#discipline')?.val();
+            data.SelectedGroupId = $('#group')?.val();
+        }
+
         function updateDisciplines(e) {
             // Возвращаем результат относительно выбранной дисциплины
             let data = @Html.Raw(JsonSerializer.Serialize(Model));
-            let value = e.value;
-
-            data.SelectedDisciplineId = value;
-
+            setDirectionValues(data);
+            
             $.ajax({
                 type: "POST",
                 url: '@(Url.Action("Filter"))',
@@ -31,9 +42,7 @@
         function updateGroups(e) {
             // Возвращаем результат относительно выбранной группы
             let data = @Html.Raw(JsonSerializer.Serialize(Model));
-            let value = e.value;
-
-            data.SelectedGroupId = value;
+            setDirectionValues(data);
 
             $.ajax({
                 type: "POST",
@@ -56,36 +65,12 @@
 
         <div class="form-group">
             <label for="discipline">Выберите дисциплину</label>
-            <select name="Disciplines" id="discipline" class="form-control" onchange="updateDisciplines(this)">
-                @foreach (var discipline in Model.Disciplines)
-                {
-                    if (discipline.DisciplinesID == Model.SelectedDisciplineId)
-                    {
-                        <option selected="selected" value="@discipline.DisciplinesID">@discipline.NameDiscipline</option>
-                    }
-                    else
-                    {
-                        <option value="@discipline.DisciplinesID">@discipline.NameDiscipline</option>
-                    }
-                }
-            </select>
+            @Html.DropDownListFor(x => x.SelectedDisciplineId, disciplinesSelectItemList, "-", new { id="discipline", @class="form-control", onchange="updateDisciplines(this)" })
         </div>
 
         <div class="form-group">
             <label for="group">Выберите группу</label>
-            <select name="Groups" id="group" class="form-control" onchange="updateGroups(this)">
-                @foreach (var group in Model.Groups)
-                {
-                    if (group.GroupsID == Model.SelectedGroupId)
-                    {
-                        <option selected="selected" value="@group.GroupsID">@group.NameGroups</option>
-                    }
-                    else
-                    {
-                        <option value="@group.GroupsID">@group.NameGroups</option>
-                    }
-                }
-            </select>
+            @Html.DropDownListFor(x => x.SelectedGroupId, groupsSelectItemList, "-", new { id="group", @class="form-control", onchange="updateGroups(this)" })
         </div>
         
 
@@ -116,7 +101,15 @@
                             <td>@student.StudentFullname</td>
                             @foreach (var grade in student.Grades.OrderBy(x => x.DayOfWeek))
                             {
-                                <td>@grade.Value</td>
+                                <td>
+                                    @Html.DropDownList("value", new List<SelectListItem>() {
+                                        new SelectListItem("Н", "Н", grade.Value == "Н"),
+                                        new SelectListItem("2", "2", grade.Value == "2"),
+                                        new SelectListItem("3", "3", grade.Value == "3"),
+                                        new SelectListItem("4", "4", grade.Value == "4"),
+                                        new SelectListItem("5", "5", grade.Value == "5"),
+                                    }, " ", new { @class="form-control" })
+                                </td>
                             }
                         </tr>
                     }

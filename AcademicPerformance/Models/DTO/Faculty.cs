@@ -5,7 +5,7 @@ namespace AcademicPerformance.Models.DTO
     public class Faculty
     {
         [Key]
-        public int FacultiesID { get; set; }
-        public string NameFaculty { get; set; }
+        public int FacultyId { get; set; }
+        public string Name { get; set; }
     }
 }

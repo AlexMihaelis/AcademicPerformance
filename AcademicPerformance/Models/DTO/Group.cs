@@ -7,8 +7,8 @@ namespace AcademicPerformance.Models.DTO
     public class Group
     {
         [Key]
-        public int GroupsID { get; set; }
-        public string NameGroups { get; set; }
-        public int FacultiesID { get; set; }
+        public int GroupId { get; set; }
+        public string Name { get; set; }
+        public int FacultyId { get; set; }
     }
 }
