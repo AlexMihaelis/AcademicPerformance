@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: AcademicPerformance.EntityFraamewordCore
+  commentId: N:AcademicPerformance.EntityFraamewordCore
+  id: AcademicPerformance.EntityFraamewordCore
+  children:
+  - AcademicPerformance.EntityFraamewordCore.AcademicPerformanceDBContext
+  langs:
+  - csharp
+  - vb
+  name: AcademicPerformance.EntityFraamewordCore
+  nameWithType: AcademicPerformance.EntityFraamewordCore
+  fullName: AcademicPerformance.EntityFraamewordCore
+  type: Namespace
+  assemblies:
+  - AcademicPerformance
+references:
+- uid: AcademicPerformance.EntityFraamewordCore.AcademicPerformanceDBContext
+  commentId: T:AcademicPerformance.EntityFraamewordCore.AcademicPerformanceDBContext
+  parent: AcademicPerformance.EntityFraamewordCore
+  href: AcademicPerformance.EntityFraamewordCore.AcademicPerformanceDBContext.html
+  name: AcademicPerformanceDBContext
+  nameWithType: AcademicPerformanceDBContext
+  fullName: AcademicPerformance.EntityFraamewordCore.AcademicPerformanceDBContext
+- uid: AcademicPerformance.EntityFraamewordCore
+  commentId: N:AcademicPerformance.EntityFraamewordCore
+  href: AcademicPerformance.html
+  name: AcademicPerformance.EntityFraamewordCore
+  nameWithType: AcademicPerformance.EntityFraamewordCore
+  fullName: AcademicPerformance.EntityFraamewordCore
+  spec.csharp:
+  - uid: AcademicPerformance
+    name: AcademicPerformance
+    href: AcademicPerformance.html
+  - name: .
+  - uid: AcademicPerformance.EntityFraamewordCore
+    name: EntityFraamewordCore
+    href: AcademicPerformance.EntityFraamewordCore.html
+  spec.vb:
+  - uid: AcademicPerformance
+    name: AcademicPerformance
+    href: AcademicPerformance.html
+  - name: .
+  - uid: AcademicPerformance.EntityFraamewordCore
+    name: EntityFraamewordCore
+    href: AcademicPerformance.EntityFraamewordCore.html

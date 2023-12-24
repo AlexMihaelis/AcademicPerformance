@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: AcademicPerformance.Models.DTO
+  commentId: N:AcademicPerformance.Models.DTO
+  id: AcademicPerformance.Models.DTO
+  children:
+  - AcademicPerformance.Models.DTO.Discipline
+  - AcademicPerformance.Models.DTO.ErrorViewModel
+  - AcademicPerformance.Models.DTO.Faculty
+  - AcademicPerformance.Models.DTO.Grade
+  - AcademicPerformance.Models.DTO.Group
+  - AcademicPerformance.Models.DTO.Student
+  langs:
+  - csharp
+  - vb
+  name: AcademicPerformance.Models.DTO
+  nameWithType: AcademicPerformance.Models.DTO
+  fullName: AcademicPerformance.Models.DTO
+  type: Namespace
+  assemblies:
+  - AcademicPerformance
+references:
+- uid: AcademicPerformance.Models.DTO.Discipline
+  commentId: T:AcademicPerformance.Models.DTO.Discipline
+  href: AcademicPerformance.Models.DTO.Discipline.html
+  name: Discipline
+  nameWithType: Discipline
+  fullName: AcademicPerformance.Models.DTO.Discipline
+- uid: AcademicPerformance.Models.DTO.ErrorViewModel
+  commentId: T:AcademicPerformance.Models.DTO.ErrorViewModel
+  href: AcademicPerformance.Models.DTO.ErrorViewModel.html
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel
+  fullName: AcademicPerformance.Models.DTO.ErrorViewModel
+- uid: AcademicPerformance.Models.DTO.Faculty
+  commentId: T:AcademicPerformance.Models.DTO.Faculty
+  href: AcademicPerformance.Models.DTO.Faculty.html
+  name: Faculty
+  nameWithType: Faculty
+  fullName: AcademicPerformance.Models.DTO.Faculty
+- uid: AcademicPerformance.Models.DTO.Grade
+  commentId: T:AcademicPerformance.Models.DTO.Grade
+  href: AcademicPerformance.Models.DTO.Grade.html
+  name: Grade
+  nameWithType: Grade
+  fullName: AcademicPerformance.Models.DTO.Grade
+- uid: AcademicPerformance.Models.DTO.Group
+  commentId: T:AcademicPerformance.Models.DTO.Group
+  href: AcademicPerformance.Models.DTO.Group.html
+  name: Group
+  nameWithType: Group
+  fullName: AcademicPerformance.Models.DTO.Group
+- uid: AcademicPerformance.Models.DTO.Student
+  commentId: T:AcademicPerformance.Models.DTO.Student
+  parent: AcademicPerformance.Models.DTO
+  href: AcademicPerformance.Models.DTO.Student.html
+  name: Student
+  nameWithType: Student
+  fullName: AcademicPerformance.Models.DTO.Student
+- uid: AcademicPerformance.Models.DTO
+  commentId: N:AcademicPerformance.Models.DTO
+  href: AcademicPerformance.html
+  name: AcademicPerformance.Models.DTO
+  nameWithType: AcademicPerformance.Models.DTO
+  fullName: AcademicPerformance.Models.DTO
+  spec.csharp:
+  - uid: AcademicPerformance
+    name: AcademicPerformance
+    href: AcademicPerformance.html
+  - name: .
+  - uid: AcademicPerformance.Models
+    name: Models
+    href: AcademicPerformance.Models.html
+  - name: .
+  - uid: AcademicPerformance.Models.DTO
+    name: DTO
+    href: AcademicPerformance.Models.DTO.html
+  spec.vb:
+  - uid: AcademicPerformance
+    name: AcademicPerformance
+    href: AcademicPerformance.html
+  - name: .
+  - uid: AcademicPerformance.Models
+    name: Models
+    href: AcademicPerformance.Models.html
+  - name: .
+  - uid: AcademicPerformance.Models.DTO
+    name: DTO
+    href: AcademicPerformance.Models.DTO.html

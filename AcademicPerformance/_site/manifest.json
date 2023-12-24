@@ -1,0 +1,192 @@
+{
+  "source_base_path": "C:/Users/Elina/source/repos/AcademicPerformance/AcademicPerformance",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Controllers.PerfomanceController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Controllers.PerfomanceController.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.EntityFraamewordCore.AcademicPerformanceDBContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.EntityFraamewordCore.AcademicPerformanceDBContext.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.EntityFraamewordCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.EntityFraamewordCore.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.DTO.Discipline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.DTO.Discipline.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.DTO.ErrorViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.DTO.ErrorViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.DTO.Faculty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.DTO.Faculty.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.DTO.Grade.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.DTO.Grade.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.DTO.Group.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.DTO.Group.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.DTO.Student.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.DTO.Student.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.DTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.DTO.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.ViewModels.FilterPerfomanceViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.ViewModels.FilterPerfomanceViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.ViewModels.GradeViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.ViewModels.GradeViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.ViewModels.PerfomanceViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.ViewModels.PerfomanceViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AcademicPerformance.Models.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AcademicPerformance.Models.ViewModels.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "wwwroot/lib/jquery-validation/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "wwwroot/lib/jquery-validation/LICENSE.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

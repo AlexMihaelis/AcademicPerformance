@@ -27,4 +27,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Perfomance}/{action=Index}/{id?}");
 
+await Docfx.Docset.Build("docfx.json");
 app.Run();

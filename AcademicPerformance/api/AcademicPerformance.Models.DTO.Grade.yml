@@ -1,0 +1,595 @@
+### YamlMime:ManagedReference
+items:
+- uid: AcademicPerformance.Models.DTO.Grade
+  commentId: T:AcademicPerformance.Models.DTO.Grade
+  id: Grade
+  parent: AcademicPerformance.Models.DTO
+  children:
+  - AcademicPerformance.Models.DTO.Grade.Date
+  - AcademicPerformance.Models.DTO.Grade.DisciplineId
+  - AcademicPerformance.Models.DTO.Grade.GradeId
+  - AcademicPerformance.Models.DTO.Grade.Student
+  - AcademicPerformance.Models.DTO.Grade.StudentId
+  - AcademicPerformance.Models.DTO.Grade.Value
+  langs:
+  - csharp
+  - vb
+  name: Grade
+  nameWithType: Grade
+  fullName: AcademicPerformance.Models.DTO.Grade
+  type: Class
+  source:
+    remote:
+      path: AcademicPerformance/Models/DTO/Grade.cs
+      branch: master
+      repo: https://github.com/AlexMihaelis/AcademicPerformance.git
+    id: Grade
+    path: Models/DTO/Grade.cs
+    startLine: 9
+  assemblies:
+  - AcademicPerformance
+  namespace: AcademicPerformance.Models.DTO
+  summary: Модель оценки
+  example: []
+  syntax:
+    content: public class Grade
+    content.vb: Public Class Grade
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AcademicPerformance.Models.DTO.Grade.GradeId
+  commentId: P:AcademicPerformance.Models.DTO.Grade.GradeId
+  id: GradeId
+  parent: AcademicPerformance.Models.DTO.Grade
+  langs:
+  - csharp
+  - vb
+  name: GradeId
+  nameWithType: Grade.GradeId
+  fullName: AcademicPerformance.Models.DTO.Grade.GradeId
+  type: Property
+  source:
+    remote:
+      path: AcademicPerformance/Models/DTO/Grade.cs
+      branch: master
+      repo: https://github.com/AlexMihaelis/AcademicPerformance.git
+    id: GradeId
+    path: Models/DTO/Grade.cs
+    startLine: 14
+  assemblies:
+  - AcademicPerformance
+  namespace: AcademicPerformance.Models.DTO
+  summary: Идентификатор оценки
+  example: []
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int GradeId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property GradeId As Integer
+  overload: AcademicPerformance.Models.DTO.Grade.GradeId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+- uid: AcademicPerformance.Models.DTO.Grade.StudentId
+  commentId: P:AcademicPerformance.Models.DTO.Grade.StudentId
+  id: StudentId
+  parent: AcademicPerformance.Models.DTO.Grade
+  langs:
+  - csharp
+  - vb
+  name: StudentId
+  nameWithType: Grade.StudentId
+  fullName: AcademicPerformance.Models.DTO.Grade.StudentId
+  type: Property
+  source:
+    remote:
+      path: AcademicPerformance/Models/DTO/Grade.cs
+      branch: master
+      repo: https://github.com/AlexMihaelis/AcademicPerformance.git
+    id: StudentId
+    path: Models/DTO/Grade.cs
+    startLine: 20
+  assemblies:
+  - AcademicPerformance
+  namespace: AcademicPerformance.Models.DTO
+  summary: Идентификатор студентов
+  example: []
+  syntax:
+    content: public int StudentId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property StudentId As Integer
+  overload: AcademicPerformance.Models.DTO.Grade.StudentId*
+- uid: AcademicPerformance.Models.DTO.Grade.DisciplineId
+  commentId: P:AcademicPerformance.Models.DTO.Grade.DisciplineId
+  id: DisciplineId
+  parent: AcademicPerformance.Models.DTO.Grade
+  langs:
+  - csharp
+  - vb
+  name: DisciplineId
+  nameWithType: Grade.DisciplineId
+  fullName: AcademicPerformance.Models.DTO.Grade.DisciplineId
+  type: Property
+  source:
+    remote:
+      path: AcademicPerformance/Models/DTO/Grade.cs
+      branch: master
+      repo: https://github.com/AlexMihaelis/AcademicPerformance.git
+    id: DisciplineId
+    path: Models/DTO/Grade.cs
+    startLine: 24
+  assemblies:
+  - AcademicPerformance
+  namespace: AcademicPerformance.Models.DTO
+  summary: Идентификатор дисциплины
+  example: []
+  syntax:
+    content: public int DisciplineId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DisciplineId As Integer
+  overload: AcademicPerformance.Models.DTO.Grade.DisciplineId*
+- uid: AcademicPerformance.Models.DTO.Grade.Value
+  commentId: P:AcademicPerformance.Models.DTO.Grade.Value
+  id: Value
+  parent: AcademicPerformance.Models.DTO.Grade
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: Grade.Value
+  fullName: AcademicPerformance.Models.DTO.Grade.Value
+  type: Property
+  source:
+    remote:
+      path: AcademicPerformance/Models/DTO/Grade.cs
+      branch: master
+      repo: https://github.com/AlexMihaelis/AcademicPerformance.git
+    id: Value
+    path: Models/DTO/Grade.cs
+    startLine: 28
+  assemblies:
+  - AcademicPerformance
+  namespace: AcademicPerformance.Models.DTO
+  summary: значение
+  example: []
+  syntax:
+    content: public string? Value { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Value As String
+  overload: AcademicPerformance.Models.DTO.Grade.Value*
+- uid: AcademicPerformance.Models.DTO.Grade.Date
+  commentId: P:AcademicPerformance.Models.DTO.Grade.Date
+  id: Date
+  parent: AcademicPerformance.Models.DTO.Grade
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: Grade.Date
+  fullName: AcademicPerformance.Models.DTO.Grade.Date
+  type: Property
+  source:
+    remote:
+      path: AcademicPerformance/Models/DTO/Grade.cs
+      branch: master
+      repo: https://github.com/AlexMihaelis/AcademicPerformance.git
+    id: Date
+    path: Models/DTO/Grade.cs
+    startLine: 32
+  assemblies:
+  - AcademicPerformance
+  namespace: AcademicPerformance.Models.DTO
+  summary: Дата выставления оценки
+  example: []
+  syntax:
+    content: public DateTime Date { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property [Date] As Date
+  overload: AcademicPerformance.Models.DTO.Grade.Date*
+- uid: AcademicPerformance.Models.DTO.Grade.Student
+  commentId: P:AcademicPerformance.Models.DTO.Grade.Student
+  id: Student
+  parent: AcademicPerformance.Models.DTO.Grade
+  langs:
+  - csharp
+  - vb
+  name: Student
+  nameWithType: Grade.Student
+  fullName: AcademicPerformance.Models.DTO.Grade.Student
+  type: Property
+  source:
+    remote:
+      path: AcademicPerformance/Models/DTO/Grade.cs
+      branch: master
+      repo: https://github.com/AlexMihaelis/AcademicPerformance.git
+    id: Student
+    path: Models/DTO/Grade.cs
+    startLine: 36
+  assemblies:
+  - AcademicPerformance
+  namespace: AcademicPerformance.Models.DTO
+  summary: Навигационное свойство "Студент"
+  example: []
+  syntax:
+    content: public Student Student { get; set; }
+    parameters: []
+    return:
+      type: AcademicPerformance.Models.DTO.Student
+    content.vb: Public Property Student As Student
+  overload: AcademicPerformance.Models.DTO.Grade.Student*
+references:
+- uid: AcademicPerformance.Models.DTO
+  commentId: N:AcademicPerformance.Models.DTO
+  href: AcademicPerformance.html
+  name: AcademicPerformance.Models.DTO
+  nameWithType: AcademicPerformance.Models.DTO
+  fullName: AcademicPerformance.Models.DTO
+  spec.csharp:
+  - uid: AcademicPerformance
+    name: AcademicPerformance
+    href: AcademicPerformance.html
+  - name: .
+  - uid: AcademicPerformance.Models
+    name: Models
+    href: AcademicPerformance.Models.html
+  - name: .
+  - uid: AcademicPerformance.Models.DTO
+    name: DTO
+    href: AcademicPerformance.Models.DTO.html
+  spec.vb:
+  - uid: AcademicPerformance
+    name: AcademicPerformance
+    href: AcademicPerformance.html
+  - name: .
+  - uid: AcademicPerformance.Models
+    name: Models
+    href: AcademicPerformance.Models.html
+  - name: .
+  - uid: AcademicPerformance.Models.DTO
+    name: DTO
+    href: AcademicPerformance.Models.DTO.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AcademicPerformance.Models.DTO.Grade.GradeId*
+  commentId: Overload:AcademicPerformance.Models.DTO.Grade.GradeId
+  href: AcademicPerformance.Models.DTO.Grade.html#AcademicPerformance_Models_DTO_Grade_GradeId
+  name: GradeId
+  nameWithType: Grade.GradeId
+  fullName: AcademicPerformance.Models.DTO.Grade.GradeId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AcademicPerformance.Models.DTO.Grade.StudentId*
+  commentId: Overload:AcademicPerformance.Models.DTO.Grade.StudentId
+  href: AcademicPerformance.Models.DTO.Grade.html#AcademicPerformance_Models_DTO_Grade_StudentId
+  name: StudentId
+  nameWithType: Grade.StudentId
+  fullName: AcademicPerformance.Models.DTO.Grade.StudentId
+- uid: AcademicPerformance.Models.DTO.Grade.DisciplineId*
+  commentId: Overload:AcademicPerformance.Models.DTO.Grade.DisciplineId
+  href: AcademicPerformance.Models.DTO.Grade.html#AcademicPerformance_Models_DTO_Grade_DisciplineId
+  name: DisciplineId
+  nameWithType: Grade.DisciplineId
+  fullName: AcademicPerformance.Models.DTO.Grade.DisciplineId
+- uid: AcademicPerformance.Models.DTO.Grade.Value*
+  commentId: Overload:AcademicPerformance.Models.DTO.Grade.Value
+  href: AcademicPerformance.Models.DTO.Grade.html#AcademicPerformance_Models_DTO_Grade_Value
+  name: Value
+  nameWithType: Grade.Value
+  fullName: AcademicPerformance.Models.DTO.Grade.Value
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AcademicPerformance.Models.DTO.Grade.Date*
+  commentId: Overload:AcademicPerformance.Models.DTO.Grade.Date
+  href: AcademicPerformance.Models.DTO.Grade.html#AcademicPerformance_Models_DTO_Grade_Date
+  name: Date
+  nameWithType: Grade.Date
+  fullName: AcademicPerformance.Models.DTO.Grade.Date
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: AcademicPerformance.Models.DTO.Grade.Student*
+  commentId: Overload:AcademicPerformance.Models.DTO.Grade.Student
+  href: AcademicPerformance.Models.DTO.Grade.html#AcademicPerformance_Models_DTO_Grade_Student
+  name: Student
+  nameWithType: Grade.Student
+  fullName: AcademicPerformance.Models.DTO.Grade.Student
+- uid: AcademicPerformance.Models.DTO.Student
+  commentId: T:AcademicPerformance.Models.DTO.Student
+  parent: AcademicPerformance.Models.DTO
+  href: AcademicPerformance.Models.DTO.Student.html
+  name: Student
+  nameWithType: Student
+  fullName: AcademicPerformance.Models.DTO.Student

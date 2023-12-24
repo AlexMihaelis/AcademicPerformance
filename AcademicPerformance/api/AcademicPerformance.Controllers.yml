@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AcademicPerformance.Controllers
+  commentId: N:AcademicPerformance.Controllers
+  id: AcademicPerformance.Controllers
+  children:
+  - AcademicPerformance.Controllers.PerfomanceController
+  langs:
+  - csharp
+  - vb
+  name: AcademicPerformance.Controllers
+  nameWithType: AcademicPerformance.Controllers
+  fullName: AcademicPerformance.Controllers
+  type: Namespace
+  assemblies:
+  - AcademicPerformance
+references:
+- uid: AcademicPerformance.Controllers.PerfomanceController
+  commentId: T:AcademicPerformance.Controllers.PerfomanceController
+  href: AcademicPerformance.Controllers.PerfomanceController.html
+  name: PerfomanceController
+  nameWithType: PerfomanceController
+  fullName: AcademicPerformance.Controllers.PerfomanceController

@@ -1,0 +1,37 @@
+### YamlMime:TableOfContent
+items:
+- uid: AcademicPerformance.Controllers
+  name: AcademicPerformance.Controllers
+  items:
+  - uid: AcademicPerformance.Controllers.PerfomanceController
+    name: PerfomanceController
+- uid: AcademicPerformance.EntityFraamewordCore
+  name: AcademicPerformance.EntityFraamewordCore
+  items:
+  - uid: AcademicPerformance.EntityFraamewordCore.AcademicPerformanceDBContext
+    name: AcademicPerformanceDBContext
+- uid: AcademicPerformance.Models.DTO
+  name: AcademicPerformance.Models.DTO
+  items:
+  - uid: AcademicPerformance.Models.DTO.Discipline
+    name: Discipline
+  - uid: AcademicPerformance.Models.DTO.ErrorViewModel
+    name: ErrorViewModel
+  - uid: AcademicPerformance.Models.DTO.Faculty
+    name: Faculty
+  - uid: AcademicPerformance.Models.DTO.Grade
+    name: Grade
+  - uid: AcademicPerformance.Models.DTO.Group
+    name: Group
+  - uid: AcademicPerformance.Models.DTO.Student
+    name: Student
+- uid: AcademicPerformance.Models.ViewModels
+  name: AcademicPerformance.Models.ViewModels
+  items:
+  - uid: AcademicPerformance.Models.ViewModels.FilterPerfomanceViewModel
+    name: FilterPerfomanceViewModel
+  - uid: AcademicPerformance.Models.ViewModels.GradeViewModel
+    name: GradeViewModel
+  - uid: AcademicPerformance.Models.ViewModels.PerfomanceViewModel
+    name: PerfomanceViewModel
+memberLayout: SamePage

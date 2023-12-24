@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: AcademicPerformance.Models.ViewModels
+  commentId: N:AcademicPerformance.Models.ViewModels
+  id: AcademicPerformance.Models.ViewModels
+  children:
+  - AcademicPerformance.Models.ViewModels.FilterPerfomanceViewModel
+  - AcademicPerformance.Models.ViewModels.GradeViewModel
+  - AcademicPerformance.Models.ViewModels.PerfomanceViewModel
+  langs:
+  - csharp
+  - vb
+  name: AcademicPerformance.Models.ViewModels
+  nameWithType: AcademicPerformance.Models.ViewModels
+  fullName: AcademicPerformance.Models.ViewModels
+  type: Namespace
+  assemblies:
+  - AcademicPerformance
+references:
+- uid: AcademicPerformance.Models.ViewModels.FilterPerfomanceViewModel
+  commentId: T:AcademicPerformance.Models.ViewModels.FilterPerfomanceViewModel
+  parent: AcademicPerformance.Models.ViewModels
+  href: AcademicPerformance.Models.ViewModels.FilterPerfomanceViewModel.html
+  name: FilterPerfomanceViewModel
+  nameWithType: FilterPerfomanceViewModel
+  fullName: AcademicPerformance.Models.ViewModels.FilterPerfomanceViewModel
+- uid: AcademicPerformance.Models.ViewModels.GradeViewModel
+  commentId: T:AcademicPerformance.Models.ViewModels.GradeViewModel
+  href: AcademicPerformance.Models.ViewModels.GradeViewModel.html
+  name: GradeViewModel
+  nameWithType: GradeViewModel
+  fullName: AcademicPerformance.Models.ViewModels.GradeViewModel
+- uid: AcademicPerformance.Models.ViewModels.PerfomanceViewModel
+  commentId: T:AcademicPerformance.Models.ViewModels.PerfomanceViewModel
+  href: AcademicPerformance.Models.ViewModels.PerfomanceViewModel.html
+  name: PerfomanceViewModel
+  nameWithType: PerfomanceViewModel
+  fullName: AcademicPerformance.Models.ViewModels.PerfomanceViewModel
+- uid: AcademicPerformance.Models.ViewModels
+  commentId: N:AcademicPerformance.Models.ViewModels
+  href: AcademicPerformance.html
+  name: AcademicPerformance.Models.ViewModels
+  nameWithType: AcademicPerformance.Models.ViewModels
+  fullName: AcademicPerformance.Models.ViewModels
+  spec.csharp:
+  - uid: AcademicPerformance
+    name: AcademicPerformance
+    href: AcademicPerformance.html
+  - name: .
+  - uid: AcademicPerformance.Models
+    name: Models
+    href: AcademicPerformance.Models.html
+  - name: .
+  - uid: AcademicPerformance.Models.ViewModels
+    name: ViewModels
+    href: AcademicPerformance.Models.ViewModels.html
+  spec.vb:
+  - uid: AcademicPerformance
+    name: AcademicPerformance
+    href: AcademicPerformance.html
+  - name: .
+  - uid: AcademicPerformance.Models
+    name: Models
+    href: AcademicPerformance.Models.html
+  - name: .
+  - uid: AcademicPerformance.Models.ViewModels
+    name: ViewModels
+    href: AcademicPerformance.Models.ViewModels.html

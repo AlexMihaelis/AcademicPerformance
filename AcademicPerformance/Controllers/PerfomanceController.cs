@@ -52,12 +52,6 @@ namespace AcademicPerformance.Controllers
         {
             if (filter.SelectedDisciplineId == null || filter.SelectedGroupId == null)
                 return View("Index", filter);
-        //Удалить этри запрос
-            var query = dBContext.Grades
-                .Include(x => x.Student)
-                .Where(x => x.DisciplineId == filter.SelectedDisciplineId && x.Student.GroupId == filter.SelectedGroupId)
-                .GroupBy(x => x.Student)
-                .ToQueryString();
 
             // Выбираем из БД оценки вместе со студентами по выбранной дисциплине и группе студента
             filter.Perfomance = dBContext.Grades
@@ -78,12 +72,6 @@ namespace AcademicPerformance.Controllers
                     })
                 })
                 .ToList();
-
-            // Выбираем из БД студентов, привязанных к выбранной группе
-            var query1 = dBContext.Students
-                .Where(x => x.GroupId == filter.SelectedGroupId)
-                .OrderBy(x => x.FullName)
-                .ToQueryString();
 
             var students = dBContext.Students
                 .Where(x => x.GroupId == filter.SelectedGroupId)
