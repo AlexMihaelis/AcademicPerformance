@@ -52,11 +52,12 @@ namespace AcademicPerformance.Controllers
         {
             if (filter.SelectedDisciplineId == null || filter.SelectedGroupId == null)
                 return View("Index", filter);
-
+        //Удалить этри запрос
             var query = dBContext.Grades
                 .Include(x => x.Student)
                 .Where(x => x.DisciplineId == filter.SelectedDisciplineId && x.Student.GroupId == filter.SelectedGroupId)
-                .GroupBy(x => x.Student);
+                .GroupBy(x => x.Student)
+                .ToQueryString();
 
             // Выбираем из БД оценки вместе со студентами по выбранной дисциплине и группе студента
             filter.Perfomance = dBContext.Grades
@@ -67,6 +68,7 @@ namespace AcademicPerformance.Controllers
                 .Select((x, i) => new PerfomanceViewModel
                 {
                     Number = i,
+                    StudentId = x.Key.StudentId,
                     StudentFullname = x.Key.FullName,
                     Grades = x.Select(y => new GradeViewModel
                     {
@@ -78,6 +80,11 @@ namespace AcademicPerformance.Controllers
                 .ToList();
 
             // Выбираем из БД студентов, привязанных к выбранной группе
+            var query1 = dBContext.Students
+                .Where(x => x.GroupId == filter.SelectedGroupId)
+                .OrderBy(x => x.FullName)
+                .ToQueryString();
+
             var students = dBContext.Students
                 .Where(x => x.GroupId == filter.SelectedGroupId)
                 .OrderBy(x => x.FullName)
@@ -97,13 +104,14 @@ namespace AcademicPerformance.Controllers
                 // Заполняем шаблон
                 template.Add(new PerfomanceViewModel
                 {
+                    StudentId = student.StudentId,
                     Number = i + 1,
                     StudentFullname = student.FullName,
                     Grades = Enumerable.Range(0, 6).Select(x => new GradeViewModel
                     {
                         Date = startDate.AddDays(x),
                         DayOfWeek = startDate.AddDays(x).DayOfWeek
-                    })
+                    }).ToList()
                 });
                 i++;
             }
@@ -113,7 +121,7 @@ namespace AcademicPerformance.Controllers
             {
                 foreach (var item in template)
                 {
-                    var studentInfo = filter.Perfomance.FirstOrDefault(x => x.StudentFullname == item.StudentFullname);
+                    var studentInfo = filter.Perfomance.FirstOrDefault(x => x.StudentId == item.StudentId);
                     if (studentInfo != null)
                     {
                         foreach (var grade in item.Grades)
@@ -127,6 +135,39 @@ namespace AcademicPerformance.Controllers
             filter.Perfomance = template;
 
             return View("Index", filter);
+        }
+
+        /// <summary>
+        /// Сохранение ведомости
+        /// </summary>
+        /// <param name="grades">Коллекция, которая содержит оценки</param>
+        /// <returns>Статус запроса</returns>
+        [HttpPost("Save")]
+        public IActionResult SavePerfomance(List<Grade> grades)
+        {
+            if (grades == null || !grades.Any()) return BadRequest("Не указаны оценки");
+
+            var existsGrades = dBContext.Grades.ToList().Where(x => grades.Any(y => y.Date == x.Date && y.StudentId == x.StudentId && y.DisciplineId == x.DisciplineId));
+
+            if (existsGrades.Any())
+            {
+                foreach (var grade in grades)
+                {
+                    var existGrade = existsGrades.FirstOrDefault(x => x.Date == grade.Date && x.StudentId == grade.StudentId && x.DisciplineId == grade.DisciplineId);
+                    if (existGrade != null)
+                    {
+                        existGrade.Value = grade.Value;
+                    }
+                }
+            }
+
+            var insertGrades = grades.Where(x => !existsGrades.Any(y => y.Date == x.Date && y.StudentId == x.StudentId && y.DisciplineId == x.DisciplineId));
+            dBContext.Grades.AddRange(insertGrades);
+            dBContext.ChangeTracker.DetectChanges();
+            var debug = dBContext.ChangeTracker.ToDebugString();
+            dBContext.SaveChanges();
+
+            return Ok();
         }
 
         public IActionResult Privacy()

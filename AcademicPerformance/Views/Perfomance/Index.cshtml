@@ -56,6 +56,36 @@
 
         function saveGrades() {
             // Логика для сохранения оценок в базе данных или другом хранилище
+
+            let grades = [];
+
+            let tableRecords = $('#perfomance-table > tbody > tr');
+
+            jQuery.each(tableRecords, (i, student) => {
+                jQuery.each($(student).children('td.grade'), (j, grade) => {
+                    grades.push({
+                        studentId: Number($(student).children('input[name=studentId]').val()),
+                        disciplineId: Number($('#discipline').val()),
+                        date: $(grade).children('input[name=date]').val(),
+                        value: $(grade).children('select').val()
+                    });
+                })
+            })
+
+            grades = grades.filter((item) => item.value != "");
+            let data = { "grades": grades };
+
+            $.ajax({
+                type: "POST",
+                url: '@(Url.Action("SavePerfomance"))',
+                data: { "grades": grades },
+                success: function (response) {
+                    alert('Ведомость сохранена');
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
         }
     </script>
 </head>
@@ -79,7 +109,7 @@
 
             <button class="btn btn-primary" onclick="saveGrades()">Сохранить</button>
 
-            <table class="table">
+            <table id="perfomance-table" class="table">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -97,11 +127,13 @@
                     @foreach (var student in Model.Perfomance)
                     {
                         <tr>
+                            @Html.Hidden("studentId", student.StudentId)
                             <td>@student.Number</td>
                             <td>@student.StudentFullname</td>
                             @foreach (var grade in student.Grades.OrderBy(x => x.DayOfWeek))
                             {
-                                <td>
+                                <td class="grade">
+                                    @Html.Hidden("date", grade.Date)
                                     @Html.DropDownList("value", new List<SelectListItem>() {
                                         new SelectListItem("Н", "Н", grade.Value == "Н"),
                                         new SelectListItem("2", "2", grade.Value == "2"),
